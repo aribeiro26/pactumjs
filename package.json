@@ -1,0 +1,31 @@
+{
+    "name": "pactumjs-api-contracttest",
+    "version": "1.0.0",
+    "description": "Template para testes de api e contrato utilizando o pactumjs",
+    "scripts": {
+        "test:api": "mocha --timeout 90000 --reporter mochawesome src/api/test/api.spec.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aribeiro26/pactumjs.git"
+    },
+    "keywords": [
+        "contractTest",
+        "teste",
+        "de",
+        "contrato",
+        "api"
+    ],
+    "author": "alexisandro ribeiro - (alexetec.ribeiro@gmail.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/aribeiro26/pactumjs/issues"
+    },
+    "homepage": "https://github.com/aribeiro26/pactumjs#readme",
+    "dependencies": {
+        "mochawesome": "^7.1.3",
+        "mocha": "^10.0.0",
+        "pactum": "^3.1.10"
+    },
+    "devDependencies": {}
+}

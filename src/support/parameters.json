@@ -1,0 +1,47 @@
+[
+    {
+        "baseurl": "https://jsonplaceholder.typicode.com",
+        "Method": "GET",
+        "Path": "/todos/{userId}",
+        "QueryParams": { "": "" },
+        "Headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        "PathParams": { "userId": 1 },
+        "user": "",
+        "pass": "",
+        "Status": 200,
+        "JsonLike": {
+            "userId": 1,
+            "id": 1,
+            "title": "delectus aut autem",
+            "completed": false
+        },
+        "name": "Teste 1 TODOS userID",
+        "api": "jsonplaceholder"
+    },
+
+    {
+        "baseurl": "https://jsonplaceholder.typicode.com",
+        "Method": "GET",
+        "Path": "/todos/{userId}",
+        "QueryParams": { "": "" },
+        "Headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        "PathParams": { "userId": 1 },
+        "user": "",
+        "pass": "",
+        "Status": 200,
+        "JsonLike": {
+            "userId": 1,
+            "id": 1,
+            "title": "delectus aut autem",
+            "completed": false
+        },
+        "name": "Teste 2 TODOS userID",
+        "api": "jsonplaceholder"
+    }
+]
