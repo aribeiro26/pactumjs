@@ -17,7 +17,7 @@ const awesome_reporter = {
 };
 
 for (const config of pactconfig) {
-    describe(`Teste de Api do tipo de requisição ${config.Method} do time - ${config.name}`, async () => {
+    describe(`Teste de Api do tipo de requisição ${config.Method} do Time - ${config.name}`, async () => {
         before(() => {
             request.setBaseUrl(config.baseurl);
             reporter.add(awesome_reporter);

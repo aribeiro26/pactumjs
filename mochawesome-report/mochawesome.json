@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-07-11T03:48:28.148Z",
-    "end": "2022-07-11T03:48:28.951Z",
-    "duration": 803,
+    "start": "2022-07-11T04:14:41.840Z",
+    "end": "2022-07-11T04:14:42.716Z",
+    "duration": 876,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "224c0cb1-1610-4a7d-9f3f-9530339b34ce",
+      "uuid": "39a4d522-9c4c-42bb-87f7-1436db451c70",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,14 +27,14 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "cc592dd4-449c-4877-a9dd-7bd77821a555",
-          "title": "Teste de Api do tipo de requisição GET do time - Teste 1 TODOS userID",
+          "uuid": "9c90e30d-e691-453a-8e1a-6448917bece6",
+          "title": "Teste de Api do tipo de requisição GET do Time - Teste 1 TODOS userID",
           "fullFile": "D:\\repos\\pactumjs\\src\\api\\test\\api.spec.js",
           "file": "\\src\\api\\test\\api.spec.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"Teste de Api do tipo de requisição GET do time - Teste 1 TODOS userID\"",
-              "fullTitle": "Teste de Api do tipo de requisição GET do time - Teste 1 TODOS userID \"before all\" hook in \"Teste de Api do tipo de requisição GET do time - Teste 1 TODOS userID\"",
+              "title": "\"before all\" hook in \"Teste de Api do tipo de requisição GET do Time - Teste 1 TODOS userID\"",
+              "fullTitle": "Teste de Api do tipo de requisição GET do Time - Teste 1 TODOS userID \"before all\" hook in \"Teste de Api do tipo de requisição GET do Time - Teste 1 TODOS userID\"",
               "timedOut": false,
               "duration": 0,
               "state": null,
@@ -45,14 +45,14 @@
               "context": null,
               "code": "request.setBaseUrl(config.baseurl);\nreporter.add(awesome_reporter);",
               "err": {},
-              "uuid": "7e9f72f8-e485-4d1f-a1d4-9135ab20bbb8",
-              "parentUUID": "cc592dd4-449c-4877-a9dd-7bd77821a555",
+              "uuid": "dd5ae22f-1362-4d7d-9954-9bd1cc517494",
+              "parentUUID": "9c90e30d-e691-453a-8e1a-6448917bece6",
               "isHook": true,
               "skipped": false
             },
             {
-              "title": "\"before each\" hook in \"Teste de Api do tipo de requisição GET do time - Teste 1 TODOS userID\"",
-              "fullTitle": "Teste de Api do tipo de requisição GET do time - Teste 1 TODOS userID \"before each\" hook in \"Teste de Api do tipo de requisição GET do time - Teste 1 TODOS userID\"",
+              "title": "\"before each\" hook in \"Teste de Api do tipo de requisição GET do Time - Teste 1 TODOS userID\"",
+              "fullTitle": "Teste de Api do tipo de requisição GET do Time - Teste 1 TODOS userID \"before each\" hook in \"Teste de Api do tipo de requisição GET do Time - Teste 1 TODOS userID\"",
               "timedOut": false,
               "duration": 0,
               "state": null,
@@ -63,8 +63,8 @@
               "context": null,
               "code": "// const _spec = spec();\ntest.records(\"mocha\", this);",
               "err": {},
-              "uuid": "13173fb6-5ba9-41ac-933f-6ceb33c54e3c",
-              "parentUUID": "cc592dd4-449c-4877-a9dd-7bd77821a555",
+              "uuid": "3f4c7578-3827-44bb-8ddd-8dbd3aab81a5",
+              "parentUUID": "9c90e30d-e691-453a-8e1a-6448917bece6",
               "isHook": true,
               "skipped": false
             }
@@ -73,44 +73,44 @@
           "tests": [
             {
               "title": "Iniciando a request da api - jsonplaceholder",
-              "fullTitle": "Teste de Api do tipo de requisição GET do time - Teste 1 TODOS userID Iniciando a request da api - jsonplaceholder",
+              "fullTitle": "Teste de Api do tipo de requisição GET do Time - Teste 1 TODOS userID Iniciando a request da api - jsonplaceholder",
               "timedOut": false,
-              "duration": 460,
+              "duration": 533,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": {\n      \"url\": \"https://jsonplaceholder.typicode.com/todos/1?=\",\n      \"method\": \"GET\",\n      \"path\": \"/todos/{userId}\",\n      \"pathParams\": {\n        \"userId\": 1\n      },\n      \"queryParams\": {\n        \"\": \"\"\n      },\n      \"headers\": {\n        \"Content-Type\": \"application/json\",\n        \"Accept\": \"application/json\"\n      }\n    }\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": {\n      \"statusCode\": 200,\n      \"headers\": {\n        \"date\": \"Mon, 11 Jul 2022 03:48:27 GMT\",\n        \"content-type\": \"application/json; charset=utf-8\",\n        \"content-length\": \"83\",\n        \"connection\": \"close\",\n        \"x-powered-by\": \"Express\",\n        \"x-ratelimit-limit\": \"1000\",\n        \"x-ratelimit-remaining\": \"997\",\n        \"x-ratelimit-reset\": \"1657511322\",\n        \"vary\": \"Origin, Accept-Encoding\",\n        \"access-control-allow-credentials\": \"true\",\n        \"cache-control\": \"no-cache\",\n        \"pragma\": \"no-cache\",\n        \"expires\": \"-1\",\n        \"x-content-type-options\": \"nosniff\",\n        \"etag\": \"W/\\\"53-hfEnumeNh6YirfjyjaujcOPPT+s\\\"\",\n        \"via\": \"1.1 vegur\",\n        \"cf-cache-status\": \"BYPASS\",\n        \"accept-ranges\": \"bytes\",\n        \"expect-ct\": \"max-age=604800, report-uri=\\\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\\\"\",\n        \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=A8Sx8F3A3no0%2FskPReaLAd66yZrnx8FiY0UUTY5gHEL1Mm358Is0Rb08LT4hHYsvnFGnQoN6Rceyui7SvQ0tsBAnOOILeRsf%2FLL1XLJULnbm038QUuuhseZ6E8g%2FczqCme4C0%2BFgEinuxt5bznblVl%2FcZaR49psvCKgH\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"server\": \"cloudflare\",\n        \"cf-ray\": \"728e90453fc7a5e3-GRU\",\n        \"alt-svc\": \"h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\"\n      },\n      \"body\": {\n        \"userId\": 1,\n        \"id\": 1,\n        \"title\": \"delectus aut autem\",\n        \"completed\": false\n      },\n      \"responseTime\": 455\n    }\n  }\n]",
+              "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": {\n      \"url\": \"https://jsonplaceholder.typicode.com/todos/1?=\",\n      \"method\": \"GET\",\n      \"path\": \"/todos/{userId}\",\n      \"pathParams\": {\n        \"userId\": 1\n      },\n      \"queryParams\": {\n        \"\": \"\"\n      },\n      \"headers\": {\n        \"Content-Type\": \"application/json\",\n        \"Accept\": \"application/json\"\n      }\n    }\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": {\n      \"statusCode\": 200,\n      \"headers\": {\n        \"date\": \"Mon, 11 Jul 2022 04:14:41 GMT\",\n        \"content-type\": \"application/json; charset=utf-8\",\n        \"content-length\": \"83\",\n        \"connection\": \"close\",\n        \"x-powered-by\": \"Express\",\n        \"x-ratelimit-limit\": \"1000\",\n        \"x-ratelimit-remaining\": \"999\",\n        \"x-ratelimit-reset\": \"1657512882\",\n        \"vary\": \"Origin, Accept-Encoding\",\n        \"access-control-allow-credentials\": \"true\",\n        \"cache-control\": \"no-cache\",\n        \"pragma\": \"no-cache\",\n        \"expires\": \"-1\",\n        \"x-content-type-options\": \"nosniff\",\n        \"etag\": \"W/\\\"53-hfEnumeNh6YirfjyjaujcOPPT+s\\\"\",\n        \"via\": \"1.1 vegur\",\n        \"cf-cache-status\": \"BYPASS\",\n        \"accept-ranges\": \"bytes\",\n        \"expect-ct\": \"max-age=604800, report-uri=\\\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\\\"\",\n        \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=QXahoopMKJvZZPl4He7qRrPKbkiGhBVVn8dnfb41EI%2F4k1UY6ZGYEabx3TqEOUoKa8rx4pzOXIMqwp6Nx%2B%2B7wBna8eO5%2FrVmI9p7DaP%2BN1qfsKNTONedDvKyM2NZF3eUJJd5BwEKdczO4CbxSVEwFq9vRq95faaf1jMX\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"server\": \"cloudflare\",\n        \"cf-ray\": \"728eb6b149f5a559-GRU\",\n        \"alt-svc\": \"h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\"\n      },\n      \"body\": {\n        \"userId\": 1,\n        \"id\": 1,\n        \"title\": \"delectus aut autem\",\n        \"completed\": false\n      },\n      \"responseTime\": 528\n    }\n  }\n]",
               "code": "await test\n    .withPath(config.Path)\n    .withMethod(config.Method)\n    .withQueryParams(config.QueryParams)\n    .withHeaders(config.Headers)\n    .withPathParams(config.PathParams)\n    .withAuth(config.user, config.pass)\n    .expectStatus(config.Status)\n    .expectJsonLike(config.JsonLike);",
               "err": {},
-              "uuid": "6bd568d3-d60f-4854-bc2d-c0d2dbcd7f9e",
-              "parentUUID": "cc592dd4-449c-4877-a9dd-7bd77821a555",
+              "uuid": "0f48edb9-ef41-474b-a0d6-5892f6281c33",
+              "parentUUID": "9c90e30d-e691-453a-8e1a-6448917bece6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "6bd568d3-d60f-4854-bc2d-c0d2dbcd7f9e"
+            "0f48edb9-ef41-474b-a0d6-5892f6281c33"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 460,
+          "duration": 533,
           "root": false,
           "rootEmpty": false,
           "_timeout": 90000
         },
         {
-          "uuid": "5f75a0f5-0935-4545-ba47-837033295b6c",
-          "title": "Teste de Api do tipo de requisição GET do time - Teste 2 TODOS userID",
+          "uuid": "3d9f5031-2346-4eba-ac94-329e1d63934f",
+          "title": "Teste de Api do tipo de requisição GET do Time - Teste 2 TODOS userID",
           "fullFile": "D:\\repos\\pactumjs\\src\\api\\test\\api.spec.js",
           "file": "\\src\\api\\test\\api.spec.js",
           "beforeHooks": [
             {
-              "title": "\"before all\" hook in \"Teste de Api do tipo de requisição GET do time - Teste 2 TODOS userID\"",
-              "fullTitle": "Teste de Api do tipo de requisição GET do time - Teste 2 TODOS userID \"before all\" hook in \"Teste de Api do tipo de requisição GET do time - Teste 2 TODOS userID\"",
+              "title": "\"before all\" hook in \"Teste de Api do tipo de requisição GET do Time - Teste 2 TODOS userID\"",
+              "fullTitle": "Teste de Api do tipo de requisição GET do Time - Teste 2 TODOS userID \"before all\" hook in \"Teste de Api do tipo de requisição GET do Time - Teste 2 TODOS userID\"",
               "timedOut": false,
               "duration": 0,
               "state": null,
@@ -121,14 +121,14 @@
               "context": null,
               "code": "request.setBaseUrl(config.baseurl);\nreporter.add(awesome_reporter);",
               "err": {},
-              "uuid": "c2c86365-98a0-497f-990d-95199d08568d",
-              "parentUUID": "5f75a0f5-0935-4545-ba47-837033295b6c",
+              "uuid": "fb96862a-c0e0-4e58-b912-1f6ade7d7856",
+              "parentUUID": "3d9f5031-2346-4eba-ac94-329e1d63934f",
               "isHook": true,
               "skipped": false
             },
             {
-              "title": "\"before each\" hook in \"Teste de Api do tipo de requisição GET do time - Teste 2 TODOS userID\"",
-              "fullTitle": "Teste de Api do tipo de requisição GET do time - Teste 2 TODOS userID \"before each\" hook in \"Teste de Api do tipo de requisição GET do time - Teste 2 TODOS userID\"",
+              "title": "\"before each\" hook in \"Teste de Api do tipo de requisição GET do Time - Teste 2 TODOS userID\"",
+              "fullTitle": "Teste de Api do tipo de requisição GET do Time - Teste 2 TODOS userID \"before each\" hook in \"Teste de Api do tipo de requisição GET do Time - Teste 2 TODOS userID\"",
               "timedOut": false,
               "duration": 0,
               "state": null,
@@ -139,8 +139,8 @@
               "context": null,
               "code": "// const _spec = spec();\ntest.records(\"mocha\", this);",
               "err": {},
-              "uuid": "e939cfa9-b35c-48fd-a745-17e473f7f449",
-              "parentUUID": "5f75a0f5-0935-4545-ba47-837033295b6c",
+              "uuid": "b06e5fdf-6b02-42eb-b3f4-7354ae01d23f",
+              "parentUUID": "3d9f5031-2346-4eba-ac94-329e1d63934f",
               "isHook": true,
               "skipped": false
             }
@@ -149,31 +149,31 @@
           "tests": [
             {
               "title": "Iniciando a request da api - jsonplaceholder",
-              "fullTitle": "Teste de Api do tipo de requisição GET do time - Teste 2 TODOS userID Iniciando a request da api - jsonplaceholder",
+              "fullTitle": "Teste de Api do tipo de requisição GET do Time - Teste 2 TODOS userID Iniciando a request da api - jsonplaceholder",
               "timedOut": false,
-              "duration": 331,
+              "duration": 329,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
-              "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": {\n      \"url\": \"https://jsonplaceholder.typicode.com/todos/1?=\",\n      \"method\": \"GET\",\n      \"path\": \"/todos/{userId}\",\n      \"pathParams\": {\n        \"userId\": 1\n      },\n      \"queryParams\": {\n        \"\": \"\"\n      },\n      \"headers\": {\n        \"Content-Type\": \"application/json\",\n        \"Accept\": \"application/json\"\n      }\n    }\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": {\n      \"statusCode\": 200,\n      \"headers\": {\n        \"date\": \"Mon, 11 Jul 2022 03:48:27 GMT\",\n        \"content-type\": \"application/json; charset=utf-8\",\n        \"content-length\": \"83\",\n        \"connection\": \"close\",\n        \"x-powered-by\": \"Express\",\n        \"x-ratelimit-limit\": \"1000\",\n        \"x-ratelimit-remaining\": \"996\",\n        \"x-ratelimit-reset\": \"1657511322\",\n        \"vary\": \"Origin, Accept-Encoding\",\n        \"access-control-allow-credentials\": \"true\",\n        \"cache-control\": \"no-cache\",\n        \"pragma\": \"no-cache\",\n        \"expires\": \"-1\",\n        \"x-content-type-options\": \"nosniff\",\n        \"etag\": \"W/\\\"53-hfEnumeNh6YirfjyjaujcOPPT+s\\\"\",\n        \"via\": \"1.1 vegur\",\n        \"cf-cache-status\": \"BYPASS\",\n        \"accept-ranges\": \"bytes\",\n        \"expect-ct\": \"max-age=604800, report-uri=\\\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\\\"\",\n        \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=dDybXdbkqLvOMqBCZu5k7lREQ4G4%2FJkynjqfsQOH5LS6zEMByyyafxOTmq5urbSZPNZxTL9qU9WIxkrXq8Mq10c2cPGKGXyMgtDLHg6RcIxkeHClgvbbrb9aInN213XMKZxlHed4f42nA%2F3A9FRy%2FYIewbyAZGL3r2rx\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"server\": \"cloudflare\",\n        \"cf-ray\": \"728e90477ea6a49f-GRU\",\n        \"alt-svc\": \"h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\"\n      },\n      \"body\": {\n        \"userId\": 1,\n        \"id\": 1,\n        \"title\": \"delectus aut autem\",\n        \"completed\": false\n      },\n      \"responseTime\": 331\n    }\n  },\n  {\n    \"title\": \"Request\",\n    \"value\": {\n      \"url\": \"https://jsonplaceholder.typicode.com/todos/1?=\",\n      \"method\": \"GET\",\n      \"path\": \"/todos/{userId}\",\n      \"pathParams\": {\n        \"userId\": 1\n      },\n      \"queryParams\": {\n        \"\": \"\"\n      },\n      \"headers\": {\n        \"Content-Type\": \"application/json\",\n        \"Accept\": \"application/json\"\n      }\n    }\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": {\n      \"statusCode\": 200,\n      \"headers\": {\n        \"date\": \"Mon, 11 Jul 2022 03:48:27 GMT\",\n        \"content-type\": \"application/json; charset=utf-8\",\n        \"content-length\": \"83\",\n        \"connection\": \"close\",\n        \"x-powered-by\": \"Express\",\n        \"x-ratelimit-limit\": \"1000\",\n        \"x-ratelimit-remaining\": \"996\",\n        \"x-ratelimit-reset\": \"1657511322\",\n        \"vary\": \"Origin, Accept-Encoding\",\n        \"access-control-allow-credentials\": \"true\",\n        \"cache-control\": \"no-cache\",\n        \"pragma\": \"no-cache\",\n        \"expires\": \"-1\",\n        \"x-content-type-options\": \"nosniff\",\n        \"etag\": \"W/\\\"53-hfEnumeNh6YirfjyjaujcOPPT+s\\\"\",\n        \"via\": \"1.1 vegur\",\n        \"cf-cache-status\": \"BYPASS\",\n        \"accept-ranges\": \"bytes\",\n        \"expect-ct\": \"max-age=604800, report-uri=\\\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\\\"\",\n        \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=dDybXdbkqLvOMqBCZu5k7lREQ4G4%2FJkynjqfsQOH5LS6zEMByyyafxOTmq5urbSZPNZxTL9qU9WIxkrXq8Mq10c2cPGKGXyMgtDLHg6RcIxkeHClgvbbrb9aInN213XMKZxlHed4f42nA%2F3A9FRy%2FYIewbyAZGL3r2rx\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"server\": \"cloudflare\",\n        \"cf-ray\": \"728e90477ea6a49f-GRU\",\n        \"alt-svc\": \"h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\"\n      },\n      \"body\": {\n        \"userId\": 1,\n        \"id\": 1,\n        \"title\": \"delectus aut autem\",\n        \"completed\": false\n      },\n      \"responseTime\": 331\n    }\n  }\n]",
+              "context": "[\n  {\n    \"title\": \"Request\",\n    \"value\": {\n      \"url\": \"https://jsonplaceholder.typicode.com/todos/1?=\",\n      \"method\": \"GET\",\n      \"path\": \"/todos/{userId}\",\n      \"pathParams\": {\n        \"userId\": 1\n      },\n      \"queryParams\": {\n        \"\": \"\"\n      },\n      \"headers\": {\n        \"Content-Type\": \"application/json\",\n        \"Accept\": \"application/json\"\n      }\n    }\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": {\n      \"statusCode\": 200,\n      \"headers\": {\n        \"date\": \"Mon, 11 Jul 2022 04:14:41 GMT\",\n        \"content-type\": \"application/json; charset=utf-8\",\n        \"content-length\": \"83\",\n        \"connection\": \"close\",\n        \"x-powered-by\": \"Express\",\n        \"x-ratelimit-limit\": \"1000\",\n        \"x-ratelimit-remaining\": \"998\",\n        \"x-ratelimit-reset\": \"1657512882\",\n        \"vary\": \"Origin, Accept-Encoding\",\n        \"access-control-allow-credentials\": \"true\",\n        \"cache-control\": \"no-cache\",\n        \"pragma\": \"no-cache\",\n        \"expires\": \"-1\",\n        \"x-content-type-options\": \"nosniff\",\n        \"etag\": \"W/\\\"53-hfEnumeNh6YirfjyjaujcOPPT+s\\\"\",\n        \"via\": \"1.1 vegur\",\n        \"cf-cache-status\": \"BYPASS\",\n        \"accept-ranges\": \"bytes\",\n        \"expect-ct\": \"max-age=604800, report-uri=\\\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\\\"\",\n        \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=9ASzA3VvmOUnbNrfeS0sdu6z%2B7bZhBanLxWUds9f3T0sWyHAQHGIyeOhqyRL34ma9GltOeOsbV1B0Da1nz2t8L4yZDBo5Q181rRZOVW4X1jgknxIaDk4YueppD7wLOfu89QCSPmxSPqCWkMxEJMhFspyZyThKsAnRXDi\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"server\": \"cloudflare\",\n        \"cf-ray\": \"728eb6b35c6fa51a-GRU\",\n        \"alt-svc\": \"h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\"\n      },\n      \"body\": {\n        \"userId\": 1,\n        \"id\": 1,\n        \"title\": \"delectus aut autem\",\n        \"completed\": false\n      },\n      \"responseTime\": 328\n    }\n  },\n  {\n    \"title\": \"Request\",\n    \"value\": {\n      \"url\": \"https://jsonplaceholder.typicode.com/todos/1?=\",\n      \"method\": \"GET\",\n      \"path\": \"/todos/{userId}\",\n      \"pathParams\": {\n        \"userId\": 1\n      },\n      \"queryParams\": {\n        \"\": \"\"\n      },\n      \"headers\": {\n        \"Content-Type\": \"application/json\",\n        \"Accept\": \"application/json\"\n      }\n    }\n  },\n  {\n    \"title\": \"Response\",\n    \"value\": {\n      \"statusCode\": 200,\n      \"headers\": {\n        \"date\": \"Mon, 11 Jul 2022 04:14:41 GMT\",\n        \"content-type\": \"application/json; charset=utf-8\",\n        \"content-length\": \"83\",\n        \"connection\": \"close\",\n        \"x-powered-by\": \"Express\",\n        \"x-ratelimit-limit\": \"1000\",\n        \"x-ratelimit-remaining\": \"998\",\n        \"x-ratelimit-reset\": \"1657512882\",\n        \"vary\": \"Origin, Accept-Encoding\",\n        \"access-control-allow-credentials\": \"true\",\n        \"cache-control\": \"no-cache\",\n        \"pragma\": \"no-cache\",\n        \"expires\": \"-1\",\n        \"x-content-type-options\": \"nosniff\",\n        \"etag\": \"W/\\\"53-hfEnumeNh6YirfjyjaujcOPPT+s\\\"\",\n        \"via\": \"1.1 vegur\",\n        \"cf-cache-status\": \"BYPASS\",\n        \"accept-ranges\": \"bytes\",\n        \"expect-ct\": \"max-age=604800, report-uri=\\\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\\\"\",\n        \"report-to\": \"{\\\"endpoints\\\":[{\\\"url\\\":\\\"https:\\\\/\\\\/a.nel.cloudflare.com\\\\/report\\\\/v3?s=9ASzA3VvmOUnbNrfeS0sdu6z%2B7bZhBanLxWUds9f3T0sWyHAQHGIyeOhqyRL34ma9GltOeOsbV1B0Da1nz2t8L4yZDBo5Q181rRZOVW4X1jgknxIaDk4YueppD7wLOfu89QCSPmxSPqCWkMxEJMhFspyZyThKsAnRXDi\\\"}],\\\"group\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"nel\": \"{\\\"success_fraction\\\":0,\\\"report_to\\\":\\\"cf-nel\\\",\\\"max_age\\\":604800}\",\n        \"server\": \"cloudflare\",\n        \"cf-ray\": \"728eb6b35c6fa51a-GRU\",\n        \"alt-svc\": \"h3=\\\":443\\\"; ma=86400, h3-29=\\\":443\\\"; ma=86400\"\n      },\n      \"body\": {\n        \"userId\": 1,\n        \"id\": 1,\n        \"title\": \"delectus aut autem\",\n        \"completed\": false\n      },\n      \"responseTime\": 328\n    }\n  }\n]",
               "code": "await test\n    .withPath(config.Path)\n    .withMethod(config.Method)\n    .withQueryParams(config.QueryParams)\n    .withHeaders(config.Headers)\n    .withPathParams(config.PathParams)\n    .withAuth(config.user, config.pass)\n    .expectStatus(config.Status)\n    .expectJsonLike(config.JsonLike);",
               "err": {},
-              "uuid": "bfaf321a-6af8-451b-9136-d1b624c81912",
-              "parentUUID": "5f75a0f5-0935-4545-ba47-837033295b6c",
+              "uuid": "a0078a5f-a8d4-4bcd-8e63-fa9a5c67bc64",
+              "parentUUID": "3d9f5031-2346-4eba-ac94-329e1d63934f",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "bfaf321a-6af8-451b-9136-d1b624c81912"
+            "a0078a5f-a8d4-4bcd-8e63-fa9a5c67bc64"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 331,
+          "duration": 329,
           "root": false,
           "rootEmpty": false,
           "_timeout": 90000
