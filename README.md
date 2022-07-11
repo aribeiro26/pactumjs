@@ -6,9 +6,7 @@
 ![Size](https://img.shields.io/bundlephobia/minzip/pactum)
 ![Platform](https://img.shields.io/node/v/pactum)
 
-[![Stars](https://img.shields.io/github/stars/pactumjs/pactum?style=social)](https://github.com/pactumjs/pactum/stargazers)
-[![Twitter](https://img.shields.io/twitter/follow/pactumjs?label=Follow&style=social)](https://twitter.com/pactumjs)
-
+[![Stars](https://img.shields.io/github/stars/pactumjs/pactum?style=social)](https://github.com/aribeiro26/pactumjs-api-contractTest/stargazers)
 
 ## Instalação
 
