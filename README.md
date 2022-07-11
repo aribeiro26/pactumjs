@@ -1,7 +1,3 @@
-<span align="center">
-
-![logo](./assets/logo-icon-small.svg)
-
 # PactumJS
 
 ![Build](https://github.com/pactumjs/pactum/workflows/Build/badge.svg?branch=master)
