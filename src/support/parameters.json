@@ -12,6 +12,7 @@
         "user": "",
         "pass": "",
         "Status": 200,
+        "pathFiles": "src/data/JsonLike.json",
         "JsonLike": {
             "userId": 1,
             "id": 1,
@@ -35,6 +36,7 @@
         "user": "",
         "pass": "",
         "Status": 200,
+        "pathFiles": "src/data/JsonLike.json",
         "JsonLike": {
             "userId": 1,
             "id": 1,

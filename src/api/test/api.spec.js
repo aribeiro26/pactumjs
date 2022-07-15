@@ -1,6 +1,7 @@
-const { spec, request,reporter } = require("pactum");
+const { spec, request, reporter } = require("pactum");
 const addContext = require("mochawesome/addContext");
 const pactconfig = require("../../support/parameters.json");
+const { ReadFile } = require("../../utils/ReadFile");
 
 const awesome_reporter = {
     afterSpec(spec) {
@@ -17,7 +18,9 @@ const awesome_reporter = {
 };
 
 for (const config of pactconfig) {
-    describe(`Teste de Api do tipo de requisição ${config.Method} do Time - ${config.name}`, async () => {
+    const JsonFile = ReadFile(config.arquivos);
+    describe(`Teste de Api do tipo de requisição ${config.Method} do Time - ${config.name}`, async () => {   
+        // const JsonFile = await ReadFile(config.arquivos);     
         before(() => {
             request.setBaseUrl(config.baseurl);
             reporter.add(awesome_reporter);
@@ -26,8 +29,8 @@ for (const config of pactconfig) {
             // const _spec = spec();
             test.records("mocha", this);
         });
-        const test = spec();
-        it(`Iniciando a request da api - ${config.api}`, async () => {
+        const test = spec();        
+        it(`Iniciando a request da api - ${config.api}`, async () => {            
             await test
                 .withPath(config.Path)
                 .withMethod(config.Method)
@@ -36,7 +39,7 @@ for (const config of pactconfig) {
                 .withPathParams(config.PathParams)
                 .withAuth(config.user, config.pass)
                 .expectStatus(config.Status)
-                .expectJsonLike(config.JsonLike);
+                .expectJsonLike(JsonFile);
         });
     });
 }
