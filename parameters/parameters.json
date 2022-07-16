@@ -1,5 +1,7 @@
 [
     {
+        "name": "Teste 1 TODOS userID",
+        "api": "jsonplaceholder",
         "baseurl": "https://jsonplaceholder.typicode.com",
         "Method": "GET",
         "Path": "/todos/{userId}",
@@ -12,18 +14,12 @@
         "user": "",
         "pass": "",
         "Status": 200,
-        "pathFiles": "src/data/JsonLike.json",
-        "JsonLike": {
-            "userId": 1,
-            "id": 1,
-            "title": "delectus aut autem",
-            "completed": false
-        },
-        "name": "Teste 1 TODOS userID",
-        "api": "jsonplaceholder"
+        "pathFiles": "src/data/Contract.json"       
     },
 
     {
+        "name": "Teste 2 TODOS userID",
+        "api": "jsonplaceholder",
         "baseurl": "https://jsonplaceholder.typicode.com",
         "Method": "GET",
         "Path": "/todos/{userId}",
@@ -36,14 +32,6 @@
         "user": "",
         "pass": "",
         "Status": 200,
-        "pathFiles": "src/data/JsonLike.json",
-        "JsonLike": {
-            "userId": 1,
-            "id": 1,
-            "title": "delectus aut autem",
-            "completed": false
-        },
-        "name": "Teste 2 TODOS userID",
-        "api": "jsonplaceholder"
+        "pathFiles": "src/data/Contract.json"       
     }
 ]
