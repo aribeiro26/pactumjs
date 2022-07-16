@@ -1,0 +1,6 @@
+{
+    "userId": "typeof $V === 'number'",
+    "id": "typeof $V === 'number'",
+    "title": "typeof $V === 'string'",
+    "completed": "typeof $V === 'boolean'"
+}
