@@ -1,4 +1,4 @@
-const { PrepareTest } = require('@src/Helpers/PrepareTest/PrepareTest')
+const { PrepareTest } = require('../Helpers')
 
 describe('Iniciando teste de contrato...', async () => {
     await PrepareTest()

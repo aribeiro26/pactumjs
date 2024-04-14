@@ -3,16 +3,16 @@ const {
     ReadFile,
     GetFiles,
     CheckParams
-} = require('@src/utils/index')
-const { GetPathParams } = require('@src/support/GetParams')
-const { GetNameFile } = require('@src/support/GetNameFile')
+} = require('../../utils')
+const { GetPathParams } = require('../../support')
+const { GetNameFile } = require('../../support')
 const {
     Auth,
     BodyParams,
     PathParams,
     QueryParams
-} = require('@src/Helpers/OptionTest')
-const { TestContractConfig } = require('@src/config/')
+} = require('../../Helpers/OptionsTest/OptionsTest')
+const { TestContractConfig } = require('../../config')
 const { expect } = require('pactum')
 
 const auth = process.env.AUTHORIZATION

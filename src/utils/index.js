@@ -2,14 +2,14 @@ const {
     ReadFile,
     GetFiles,
     CheckParams
-} = require('@src/utils/ReadFile/ReadFile')
-const { Randoms } = require('@src/utils/Random/Random')
+} = require('../utils/ReadFile/ReadFile')
+const { Randoms } = require('../utils/Random/Random')
 const {
     GetToken,
     Authentication,
     GetAuthID
-} = require('@src/utils/GetToken/GetToken')
-const { CurrentDate } = require('@src/utils/CurrentDate/CurrentDate')
+} = require('../utils/GetToken/GetToken')
+const { CurrentDate } = require('../utils/CurrentDate/CurrentDate')
 
 module.exports = {
     ReadFile,

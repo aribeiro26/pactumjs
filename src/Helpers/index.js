@@ -4,9 +4,9 @@ const {
     PathParams,
     QueryParams
 } = require('./OptionsTest/OptionsTest')
-
+const { PrepareTest } = require('./PrepareTest/PrepareTest')
 module.exports = {
-    PrepareTest: require('./PrepareTest/PrepareTest').PrepareTest,
+    PrepareTest,
     Auth,
     BodyParams,
     PathParams,
