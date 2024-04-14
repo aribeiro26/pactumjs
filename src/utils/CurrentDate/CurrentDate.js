@@ -17,4 +17,4 @@ const CurrentDate = (params) => {
     })
     return params
 }
-module.exports = CurrentDate
+module.exports = { CurrentDate }

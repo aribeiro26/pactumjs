@@ -18,17 +18,17 @@ function Randoms(params) {
                 params[i] = lorem.generateWords(
                     +params[i].split('d_').toString().substring(6)
                 )
-                break;
+                break
             case 'n_rnd':
                 params[i] = Math.floor(Math.random() * 999999)
-                break;
-            
+                break
+
             default:
-                params;
+                params
                 break
         }
     })
     return params
 }
 
-module.exports = Randoms
+module.exports = { Randoms }

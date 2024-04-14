@@ -1,6 +1,6 @@
 async function GetAuthID(url, headers) {
     try {
-        const response = await axios.get(url, { headers }) //
+        const response = await axios.get(url, { headers })
         if (response.status >= 500) {
             throw new Error(`Server error: status code ${response.status}`)
         }
@@ -21,18 +21,18 @@ async function GetToken(url, payload, headers) {
     }
 }
 
-async function Authorization(params) {
-    const getAuthID = await GetAuthID(params.url, params.headers)
-
-    Object.keys(params).forEach((i) => {
-        switch (params[i].Authorization === 't_rnd') {
+async function Authentication(contractConfig,token) {
+    Object.keys(contractConfig).forEach((i) => {
+        switch (contractConfig[i].Authorization === 't_rnd') {
             case true:
-                params[i] = `Bearer ${getAuthID}`
+                contractConfig[i] = `Bearer ${token}`
                 break
             default:
-                params
+                contractConfig
                 break
         }
     })
-    return params
+    return contractConfig
 }
+
+module.exports = { Authentication, GetAuthID, GetToken }

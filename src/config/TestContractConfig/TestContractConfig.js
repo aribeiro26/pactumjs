@@ -15,7 +15,7 @@ const AwesomeReporter = {
     }
 }
 
-const contractConfig = (config, loadFile) => {
+const TestContractConfig = (config, loadFile) => {
     describe(config.name, async () => {
         before((done) => {
             request.setBaseUrl(config.baseUrl)
@@ -47,4 +47,4 @@ const contractConfig = (config, loadFile) => {
     })
 }
 
-module.exports = contractConfig
+module.exports = { TestContractConfig }
