@@ -1,62 +1,59 @@
 const path = require('path')
-const {
-    ReadFile,
-    GetFiles,
-    CheckParams
-} = require('../../utils')
+const { ReadFile, GetFiles, CheckParams } = require('../../utils')
 const { GetPathParams } = require('../../support')
 const { GetNameFile } = require('../../support')
 const {
     Auth,
     BodyParams,
     PathParams,
-    QueryParams
+    QueryParams,
+    FormParams,
+    user,
+    pass
 } = require('../../Helpers/OptionsTest/OptionsTest')
 const { TestContractConfig } = require('../../config')
-const { expect } = require('pactum')
 
 const auth = process.env.AUTHORIZATION
 const pathParams = GetPathParams()
-const nameFile = GetNameFile()
+const nameFile = GetNameFile(process.env.NAMEFILE)
 
 async function PrepareTest() {
     if (!CheckParams(pathParams, nameFile)) {
-        it('Teste de contrato falhou', async () => {
-            expect.fail(
-                'Verificar os parâmetros nos arquivos de configuração.json ou parâmetros da pipeline, Dúvidas consulte a documentação'
-            )
-        })
+        throw new Error(
+            'Teste de contrato falhou, Verificar os parâmetros nos arquivos de configuração.json ou parâmetros da pipeline, Dúvidas consulte a documentação'
+        )
     }
     GetFiles(pathParams, nameFile).map(async (file) => {
         const pactumFile = JSON.parse(ReadFile(`${pathParams}/${file}`))
-        pactumFile.map((config) => {
-            Promise.all([
-                Auth(config, auth),
-                BodyParams(config),
-                PathParams(config),
-                QueryParams(config)
-            ]).then(([authorization, bodyParams, pathParams, queryParams]) => {
-                config.Headers.Authorization = authorization
-                config.BodyParams = bodyParams
-                config.PathParams = pathParams
-                config.QueryParams = queryParams
 
-                let loadFile = JSON.parse(
-                    ReadFile(path.basename(pathParams, config.pathFiles).trim())
-                )
-                if (loadFile === false) {
-                    const basename = path.basename(pathParams, config.pathFiles)
-                    loadFile = JSON.parse(
-                        ReadFile(
-                            path
-                                .resolve(pathParams, config.pathFiles)
-                                .replace(basename + '/', '')
-                                .trim()
-                        )
+        pactumFile.map(async (config) => {
+            config.Headers.Authorization = await Auth(config, auth)
+            if (config.Headers.Authorization === undefined) {
+                delete config.Headers.Authorization
+            }         
+            config.BodyParams = await BodyParams(config)
+            config.PathParams = await PathParams(config)
+            config.QueryParams = await QueryParams(config)
+            config.user = await user(config)
+            config.pass = await pass(config)
+
+            let loadFile = JSON.parse(
+                ReadFile(path.resolve(pathParams, config.pathFiles).trim())
+            )
+
+            if (!loadFile) {
+                const baseName = path.basename(config.pathFiles)
+                loadFile = JSON.parse(
+                    ReadFile(
+                        path
+                            .resolve(pathParams, config.pathFiles)
+                            .replace(baseName + '/', '')
+                            .trim()
                     )
-                }
-                TestContractConfig(config, loadFile)
-            })
+                )
+            }
+
+            TestContractConfig(config, loadFile)
         })
     })
 }

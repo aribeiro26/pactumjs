@@ -1,47 +1,44 @@
 const fs = require('fs')
 
 function ReadFile(filename) {
-    try {
-        if (fs.existsSync(filename)) {
-            filename = fs.readFileSync(`${filename}`, 'utf8')
-        } else {
-            filename = filename.toLowerCase()
-            filename = fs.readFileSync(`${filename}`, 'utf8')
-        }
-    } catch (e) {
-        throw new Error('Error reading file:', e)
+    if (!fs.existsSync(filename)) {
+        console.error(!fs.existsSync(filename), 'File does not exist')
+        return
     }
+
+    filename = fs.readFileSync(filename, 'utf8')
+
     return filename
 }
 
 function GetFiles(nameDir, fileconfigName) {
-    try {
-        nameDir = fs
-            .readdirSync(nameDir)
-            .filter(
-                (file) =>
-                    file.toLowerCase().indexOf(fileconfigName.toLowerCase()) >
-                    -1
-            )
-    } catch (e) {
-        throw new Error('Error reading file:', e)
+    if (!fs.existsSync(nameDir)) {
+        console.error(!fs.existsSync(nameDir), 'Directory does not exist')
+        return
     }
-    return nameDir
+
+    const files = fs
+        .readdirSync(nameDir)
+        .filter((file) =>
+            file.toLowerCase().includes(fileconfigName.toLowerCase())
+        )
+
+    return files
 }
 
 function CheckParams(nameDir, fileconfigName) {
-    try {
-        nameDir = fs
-            .readdirSync(nameDir)
-            .filter(
-                (file) =>
-                    file.toLowerCase().indexOf(fileconfigName.toLowerCase()) >
-                    -1
-            )
-    } catch (e) {
-        throw new Error('Error reading file:', e)
+    if (!fs.existsSync(nameDir)) {
+        console.error(!fs.existsSync(nameDir), 'Directory does not exist')
+        return
     }
-    return params
+
+    const files = fs
+        .readdirSync(nameDir)
+        .filter((file) =>
+            file.toLowerCase().includes(fileconfigName.toLowerCase())
+        )
+
+    return files.length > 0
 }
 
 module.exports = { ReadFile, GetFiles, CheckParams }

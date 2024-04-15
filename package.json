@@ -4,7 +4,7 @@
     "description": "Template para testes de api e contrato utilizando o pactumjs",
     "scripts": {
         "test": "concurrently \"npm run test:api:html\" \"npm run test:api:junit\"",
-        "test:api:html": "AUTHORIZATION='' CONTRACTDATA='' CUSTOMPARAM='' NAMEFILE='parameters/parameters.json' DEFAULTPATH='tests/pactum' ./node_modules/.bin/mocha --timeout 90000 --reporter mochawesome --reporter-options reportDir=./report/ src/Test/index.spec.js",
+        "test:api:html": "AUTHORIZATION='' CONTRACTDATA='' CUSTOMPARAM='' NAMEFILE='configContract' DEFAULTPATH='tests/pactum' ./node_modules/.bin/mocha --timeout 90000 --reporter mochawesome --reporter-options reportDir=./report/ src/Test/index.spec.js",
         "test:api:junit": "mocha --timeout 90000 --reporter mocha-junit-reporter --reporter-options mochaFile=./report/test-results.xml src/Test/index.spec.js"
     },
     "engines": {

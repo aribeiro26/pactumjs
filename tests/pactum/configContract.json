@@ -1,0 +1,19 @@
+[
+    {
+        "name": "GetToken",
+        "api": "localhost:3006",
+        "baseUrl": "http://localhost:3006",
+        "Method": "post",
+        "Path": "/login",
+        "Headers": {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        "BodyParams": {
+            "file": "tests/pactum/payload/login.json"
+        },
+        "Status": 200,
+        "pathFiles": "contract/contract.json"
+    }
+   
+]

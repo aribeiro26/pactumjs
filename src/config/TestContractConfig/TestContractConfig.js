@@ -19,6 +19,7 @@ const TestContractConfig = (config, loadFile) => {
     describe(config.name, async () => {
         before((done) => {
             request.setBaseUrl(config.baseUrl)
+
             reporter.add(AwesomeReporter)
             done()
         })
@@ -27,8 +28,23 @@ const TestContractConfig = (config, loadFile) => {
         })
         const test = spec()
 
+        if (!config.FormParams) {
+            it(`Realizando o teste de contrato - ${config.api}`, async () => {
+                await test[config.Method.toLowerCase()](config.Path)
+                    .withRequestTimeout(90000)
+                    .withCompression()
+                    .withAuth(config.user, config.pass)
+                    .withHeaders(config.Headers)
+                    .withQueryParams(config.QueryParams)
+                    .withPathParams(config.PathParams)
+                    .withBody(config.BodyParams)
+                    .expectStatus(config.Status)
+                    .expectJsonLike(loadFile)
+            })
+            return
+        }
         it(`Realizando o teste de contrato - ${config.api}`, async () => {
-            await test[config.method](config.path)
+            await test[config.Method.toLowerCase()](config.Path)
                 .withRequestTimeout(90000)
                 .withCompression()
                 .withAuth(config.user, config.pass)
@@ -37,7 +53,7 @@ const TestContractConfig = (config, loadFile) => {
                 .withQueryParams(config.QueryParams)
                 .withPathParams(config.PathParams)
                 .withBody(config.BodyParams)
-                .expectStatus(config.status)
+                .expectStatus(config.Status)
                 .expectJsonLike(loadFile)
         })
 

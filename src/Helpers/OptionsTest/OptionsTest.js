@@ -1,4 +1,9 @@
-const { Randoms, CurrentDate, Authentication } = require('../../utils/')
+const {
+    Randoms,
+    CurrentDate,
+    Authentication,
+    BodyFile
+} = require('../../utils/')
 
 async function Auth(config, Authorization) {
     if (!Authorization) {
@@ -11,15 +16,19 @@ async function Auth(config, Authorization) {
 }
 
 function processParams(params) {
-    if (params) {
-        params = CurrentDate(params)
-        params = Randoms(params)
+    if (!params) {
+        return (params = { '': '' })
     }
+    params = CurrentDate(params)
+    params = Randoms(params)
     return params
 }
 
 async function BodyParams(config) {
-    return processParams(config.BodyParams)
+    if (!config.BodyParams.file) {
+        return processParams(config.BodyParams)
+    }
+    return (config.BodyParams = BodyFile(config.BodyParams.file))
 }
 
 async function PathParams(config) {
@@ -30,4 +39,19 @@ async function QueryParams(config) {
     return processParams(config.QueryParams)
 }
 
-module.exports = { Auth, BodyParams, PathParams, QueryParams }
+async function user(config) {
+    return processParams(config.QueryParams)
+}
+
+async function pass(config) {
+    return processParams(config.QueryParams)
+}
+
+module.exports = {
+    Auth,
+    BodyParams,
+    PathParams,
+    QueryParams,
+    user,
+    pass
+}
